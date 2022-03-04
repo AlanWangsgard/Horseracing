@@ -72,10 +72,10 @@ public class Main {
                         System.out.println("The winnning Horse is " + leadHorse);
                         for (Bet bet : bets){
                             if(bet.horseName.equals(leadHorse)){
-                                mike.money += bet.betAmount*1.5;
+                                mike.addMoney(bet.betAmount*1.5);
                                 System.out.println("You chose the right horse! you now have $" + mike.money);
                             }else {
-                                mike.money -= bet.betAmount;
+                                mike.subtractMoney(bet.betAmount);
                                 System.out.println("You chose the wrong horse. you now have $" + mike.money);
                             }
                         }
